@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Learning and Mastered List</title>
+</head>
+<body>
+<h1>LEARNING LIST</h1>
+    {% for word in learning_list %}
+        <a href="{{ url_for('wordlibrary', add_this_word=word, learninglist = learning_list )}}">{{ word }}</a>
+    {% endfor %}
+
+
+    <h1>MASTERED LIST</h1>
+        <ul>
+        {% for word in mastered_list %}
+            <li><p>{{ word }}</p></li>
+        {% endfor %}
+        </ul>
+
+</body>
+</html>
